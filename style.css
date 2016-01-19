@@ -78,9 +78,8 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
+  color: #5D5B5B; /* IE8 proofing */
+  
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
@@ -111,12 +110,19 @@ body {
 
 .cover {
   padding: 0 20px;
+  margin-top: 20px;
 }
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
 }
 
+/*
+ * Content
+ */
+ .content {
+     text-align: left;
+ }
 
 /*
  * Footer
