@@ -64,13 +64,15 @@ body {
   margin-left: auto;
 }
 
+.img-thumbnail {
+  filter: grayscale(1);
+}
 
 /* Padding for spacing */
 
 .inner {
   padding: 30px;
 }
-
 
 /*
  * Header
