@@ -1,10 +1,15 @@
 on:
+  workflow_dispatch:
   schedule:
   - cron: "0 2 * * 1-5"
-  
-steps:
-  - name: Check the deployed service URL
-    uses: jtalk/url-health-check-action@v3
-    with:
-      # Check the following URLs one by one sequentially
-      url: https://alexandre.machado.cc
+
+jobs:
+  test:
+    name: URL Health Check
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v3
+        with:
+          # Check the following URLs one by one sequentially
+          url: https://alexandre.machado.cc
