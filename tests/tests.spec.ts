@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test('Page Screenshot', async ({ page }) => {
   await page.goto('https://alexandre.machado.cc/');
