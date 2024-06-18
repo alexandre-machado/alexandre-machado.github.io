@@ -1,0 +1,25 @@
+{
+  "name": "alexandre-machado.github.io",
+  "version": "1.0.0",
+  "description": "Site: https://alexandre.machado.cc/",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandre-machado/alexandre-machado.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandre-machado/alexandre-machado.github.io/issues"
+  },
+  "homepage": "https://github.com/alexandre-machado/alexandre-machado.github.io#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.4"
+  }
+}
