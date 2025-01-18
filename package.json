@@ -6,7 +6,9 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "http-server -p 3000"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexandre-machado/alexandre-machado.github.io.git"
@@ -19,7 +21,10 @@
   },
   "homepage": "https://github.com/alexandre-machado/alexandre-machado.github.io#readme",
   "devDependencies": {
-    "@playwright/test": "^1.44.1",
+    "@playwright/test": "^1.49.1",
     "@types/node": "^20.14.4"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }
