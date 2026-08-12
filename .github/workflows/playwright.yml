@@ -2,8 +2,15 @@ name: Playwright Tests
 on:
   workflow_run:
     workflows: ["pages-build-deployment"]
-    types: 
+    types:
       - completed
+  pull_request:
+    branches:
+      - master
+
+concurrency:
+  group: playwright-${{ github.event_name }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -18,8 +25,14 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    # On a pull request the live site still serves the merged code, so the
+    # `E2E:` tests can't reflect the diff — run only the `Local:` ones, which
+    # are served from this branch by the webServer. The full suite still runs
+    # after each Pages deploy via the workflow_run trigger above.
     - name: Run Playwright tests
-      run: npx playwright test
+      env:
+        GREP: ${{ github.event_name == 'pull_request' && 'Local:' || '' }}
+      run: npx playwright test ${GREP:+--grep "$GREP"}
     - uses: actions/upload-artifact@v4
       if: always()
       with:
