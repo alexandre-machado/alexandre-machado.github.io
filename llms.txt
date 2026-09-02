@@ -1,0 +1,19 @@
+# Alexandre Machado
+
+> Personal site of Alexandre Machado, software engineer. Hosts links to his projects,
+> writing, and social profiles, including the Audio Blackbox Android app.
+
+## Projects
+
+- [Audio Blackbox](https://alexandre.machado.cc/audio-blackbox/): Continuous ambient audio buffer for Android. Keeps a rolling buffer of up to the last ~45 minutes of audio in RAM and only writes to storage on demand, so nothing is recorded until you decide to keep it. 100% local processing, zero network egress.
+- [Audio Blackbox on Google Play](https://play.google.com/store/apps/details?id=cc.machado.audioblackbox): Official Play Store listing for the Audio Blackbox app.
+- [Audio Blackbox source code](https://github.com/alexandre-machado/audio-blackbox): GitHub repository with the app's source code.
+- [Audio Blackbox privacy policy](https://github.com/alexandre-machado/audio-blackbox/blob/main/docs/release/privacy-policy.md): Privacy policy describing the app's local-only, zero network egress data handling.
+- [mARC](https://marc.nexaduo.com/): Multi-Agent Relay Control. Install a cross-repo team of AI engineering agents for Claude Code, Google Antigravity, or GitHub Copilot CLI.
+
+## About
+
+- [GitHub](https://github.com/alexandre-machado): Alexandre Machado's GitHub profile.
+- [Blog](http://blog.alexandre.machado.cc): Personal blog.
+- [Medium](https://medium.com/@alexandre-machado): Articles on Medium.
+- [LinkedIn](https://www.linkedin.com/in/alexandre~machado/): Professional profile on LinkedIn.

@@ -21,4 +21,40 @@ import { test, expect } from '@playwright/test';
     await page.goto(baseUrl);
   });
 
+  test(`${testEnvironment}: homepage links to projects`, async ({ page }) => {
+    await page.goto(baseUrl);
+
+    await expect(page.locator('a[href="https://alexandre.machado.cc/audio-blackbox/"]')).toHaveCount(1);
+    await expect(page.locator('a[href="https://marc.nexaduo.com/"]')).toHaveCount(1);
+  });
+
+  const fetchBase = testEnvironment === 'E2E' ? baseUrl : 'http://127.0.0.1:3000';
+
+  test(`${testEnvironment}: serves robots.txt`, async ({ request }) => {
+    const res = await request.get(`${fetchBase}/robots.txt`);
+    expect(res.status()).toBe(200);
+
+    const body = await res.text();
+    expect(body).toContain('Sitemap: https://alexandre.machado.cc/sitemap.xml');
+  });
+
+  test(`${testEnvironment}: serves sitemap.xml`, async ({ request }) => {
+    const res = await request.get(`${fetchBase}/sitemap.xml`);
+    expect(res.status()).toBe(200);
+
+    const body = await res.text();
+    expect(body).toContain('<loc>https://alexandre.machado.cc/</loc>');
+    expect(body).toContain('<loc>https://alexandre.machado.cc/audio-blackbox/</loc>');
+    expect((body.match(/<url>/g) || []).length).toBe(2);
+  });
+
+  test(`${testEnvironment}: serves llms.txt`, async ({ request }) => {
+    const res = await request.get(`${fetchBase}/llms.txt`);
+    expect(res.status()).toBe(200);
+
+    const body = await res.text();
+    expect(body).toContain('Audio Blackbox');
+    expect(body).toContain('mARC');
+  });
+
 });
