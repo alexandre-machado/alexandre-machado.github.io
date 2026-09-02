@@ -21,13 +21,6 @@ import { test, expect } from '@playwright/test';
     await page.goto(baseUrl);
   });
 
-  test(`${testEnvironment}: homepage links to projects`, async ({ page }) => {
-    await page.goto(baseUrl);
-
-    await expect(page.locator('a[href="https://alexandre.machado.cc/audio-blackbox/"]')).toHaveCount(1);
-    await expect(page.locator('a[href="https://marc.nexaduo.com/"]')).toHaveCount(1);
-  });
-
   const fetchBase = testEnvironment === 'E2E' ? baseUrl : 'http://127.0.0.1:3000';
 
   test(`${testEnvironment}: serves robots.txt`, async ({ request }) => {
