@@ -43,8 +43,9 @@ import { test, expect } from '@playwright/test';
     expect(res.status()).toBe(200);
 
     const body = await res.text();
-    expect(body).toContain('https://alexandre.machado.cc/');
-    expect(body).toContain('https://alexandre.machado.cc/audio-blackbox/');
+    expect(body).toContain('<loc>https://alexandre.machado.cc/</loc>');
+    expect(body).toContain('<loc>https://alexandre.machado.cc/audio-blackbox/</loc>');
+    expect((body.match(/<url>/g) || []).length).toBe(2);
   });
 
   test(`${testEnvironment}: serves llms.txt`, async ({ request }) => {
