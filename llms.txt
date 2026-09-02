@@ -9,6 +9,7 @@
 - [Audio Blackbox on Google Play](https://play.google.com/store/apps/details?id=cc.machado.audioblackbox): Official Play Store listing for the Audio Blackbox app.
 - [Audio Blackbox source code](https://github.com/alexandre-machado/audio-blackbox): GitHub repository with the app's source code.
 - [Audio Blackbox privacy policy](https://github.com/alexandre-machado/audio-blackbox/blob/main/docs/release/privacy-policy.md): Privacy policy describing the app's local-only, zero network egress data handling.
+- [mARC](https://marc.nexaduo.com/): Multi-Agent Relay Control. Install a cross-repo team of AI engineering agents for Claude Code, Google Antigravity, or GitHub Copilot CLI.
 
 ## About
 
