@@ -21,4 +21,31 @@ import { test, expect } from '@playwright/test';
     await page.goto(baseUrl);
   });
 
+  const fetchBase = testEnvironment === 'E2E' ? baseUrl : 'http://127.0.0.1:3000';
+
+  test(`${testEnvironment}: serves robots.txt`, async ({ request }) => {
+    const res = await request.get(`${fetchBase}/robots.txt`);
+    expect(res.status()).toBe(200);
+
+    const body = await res.text();
+    expect(body).toContain('Sitemap: https://alexandre.machado.cc/sitemap.xml');
+  });
+
+  test(`${testEnvironment}: serves sitemap.xml`, async ({ request }) => {
+    const res = await request.get(`${fetchBase}/sitemap.xml`);
+    expect(res.status()).toBe(200);
+
+    const body = await res.text();
+    expect(body).toContain('https://alexandre.machado.cc/');
+    expect(body).toContain('https://alexandre.machado.cc/audio-blackbox/');
+  });
+
+  test(`${testEnvironment}: serves llms.txt`, async ({ request }) => {
+    const res = await request.get(`${fetchBase}/llms.txt`);
+    expect(res.status()).toBe(200);
+
+    const body = await res.text();
+    expect(body).toContain('Audio Blackbox');
+  });
+
 });
