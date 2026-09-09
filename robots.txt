@@ -3,3 +3,4 @@ Allow: /
 
 # Facilita a vida dos crawlers apontando onde está o mapa do site
 Sitemap: https://alexandre.machado.cc/sitemap.xml
+Sitemap: https://alexandre.machado.cc/audio-blackbox/sitemap.xml
