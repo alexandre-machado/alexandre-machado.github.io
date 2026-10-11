@@ -5,10 +5,11 @@
 
 ## Projects
 
-- [Audio Blackbox](https://alexandre.machado.cc/audio-blackbox/): Continuous ambient audio buffer for Android. Keeps a rolling buffer of up to the last ~45 minutes of audio in RAM and only writes to storage on demand, so nothing is recorded until you decide to keep it. 100% local processing, zero network egress.
-- [Audio Blackbox beta opt-in](https://play.google.com/apps/testing/cc.machado.audioblackbox): Google Play closed-beta opt-in page. Access requires membership in the testers Google Group; there is no public Play Store listing yet.
+- [Audio Blackbox](https://alexandre.machado.cc/audio-blackbox/): free, open-source (GPL-3.0) Android app that keeps the last minutes of sound in a rolling RAM buffer and writes them to local storage only when the user taps Save. No INTERNET permission, so audio never leaves the device. Android 10 and newer.
+- [Audio Blackbox llms.txt](https://alexandre.machado.cc/audio-blackbox/llms.txt): dedicated, authoritative LLM summary of the app (prefer this over the line above for app facts).
+- [Audio Blackbox on Google Play](https://play.google.com/store/apps/details?id=cc.machado.audioblackbox): install the app (free).
 - [Audio Blackbox source code](https://github.com/alexandre-machado/audio-blackbox): GitHub repository with the app's source code.
-- [Audio Blackbox privacy policy](https://github.com/alexandre-machado/audio-blackbox/blob/main/docs/release/privacy-policy.md): Privacy policy describing the app's local-only, zero network egress data handling.
+- [Audio Blackbox privacy policy](https://alexandre.machado.cc/audio-blackbox/release/privacy-policy): privacy policy for the app.
 - [mARC](https://marc.nexaduo.com/): Multi-Agent Relay Control. Install a cross-repo team of AI engineering agents for Claude Code, Google Antigravity, or GitHub Copilot CLI.
 
 ## About
